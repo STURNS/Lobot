@@ -1,8 +1,8 @@
-# Install script for directory: F:/Embedded_Technology/Lobot/Apps/Demo
+# Install script for directory: F:/Embedded_Technology/Lobot/Drivers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Lobot")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files/Lobot")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -29,6 +29,13 @@ endif()
 
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
+  set(CMAKE_CROSSCOMPILING "TRUE")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("F:/Embedded_Technology/Lobot/Output/Drivers/Demo_driver/cmake_install.cmake")
+  include("F:/Embedded_Technology/Lobot/Output/Drivers/Demo_driver2/cmake_install.cmake")
+
 endif()
 

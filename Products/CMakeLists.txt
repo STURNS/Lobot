@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.5)
+if (PRODUCT MATCHES "Demo")
+    add_subdirectory(Demo)
+    message("add_subdirectory(Demo)")
+endif()

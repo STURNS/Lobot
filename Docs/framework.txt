@@ -1,0 +1,8 @@
+Apps - 应用
+Docs - 文档相关
+Drivers - 驱动
+Output - 输出
+Platform - 平台相关
+Test - 测试
+ThirdParts - 第3方相关
+Tools - 工具

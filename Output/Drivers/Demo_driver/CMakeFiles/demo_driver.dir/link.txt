@@ -1,0 +1,2 @@
+C:\xtensa-lx106-elf\bin\xtensa-lx106-elf-ar.exe qc libdemo_driver.a  CMakeFiles/demo_driver.dir/demo_driver.c.o
+C:\xtensa-lx106-elf\bin\xtensa-lx106-elf-ranlib.exe libdemo_driver.a

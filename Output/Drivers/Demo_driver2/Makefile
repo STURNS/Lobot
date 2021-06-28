@@ -67,14 +67,14 @@ EQUALS = =
 CMAKE_SOURCE_DIR = F:\Embedded_Technology\Lobot
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = F:\Embedded_Technology\Lobot
+CMAKE_BINARY_DIR = F:\Embedded_Technology\Lobot\Output
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	@echo Running external command ...
 	"C:\Program Files\CMake\bin\cmake-gui.exe" -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
@@ -85,7 +85,7 @@ edit_cache/fast: edit_cache
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	@echo Running external command ...
 	"C:\Program Files\CMake\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
@@ -96,14 +96,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /d F:\Embedded_Technology\Lobot && $(CMAKE_COMMAND) -E cmake_progress_start F:\Embedded_Technology\Lobot\CMakeFiles F:\Embedded_Technology\Lobot\Apps\Demo\CMakeFiles\progress.marks
-	cd /d F:\Embedded_Technology\Lobot && $(MAKE) -f CMakeFiles\Makefile2 Apps/Demo/all
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\Embedded_Technology\Lobot\CMakeFiles 0
+	cd /d F:\Embedded_Technology\Lobot\Output && $(CMAKE_COMMAND) -E cmake_progress_start F:\Embedded_Technology\Lobot\Output\CMakeFiles F:\Embedded_Technology\Lobot\Output\Drivers\Demo_driver2\CMakeFiles\progress.marks
+	cd /d F:\Embedded_Technology\Lobot\Output && $(MAKE) -f CMakeFiles\Makefile2 Drivers/Demo_driver2/all
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\Embedded_Technology\Lobot\Output\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /d F:\Embedded_Technology\Lobot && $(MAKE) -f CMakeFiles\Makefile2 Apps/Demo/clean
+	cd /d F:\Embedded_Technology\Lobot\Output && $(MAKE) -f CMakeFiles\Makefile2 Drivers/Demo_driver2/clean
 .PHONY : clean
 
 # The main clean target
@@ -113,60 +113,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /d F:\Embedded_Technology\Lobot && $(MAKE) -f CMakeFiles\Makefile2 Apps/Demo/preinstall
+	cd /d F:\Embedded_Technology\Lobot\Output && $(MAKE) -f CMakeFiles\Makefile2 Drivers/Demo_driver2/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /d F:\Embedded_Technology\Lobot && $(MAKE) -f CMakeFiles\Makefile2 Apps/Demo/preinstall
+	cd /d F:\Embedded_Technology\Lobot\Output && $(MAKE) -f CMakeFiles\Makefile2 Drivers/Demo_driver2/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /d F:\Embedded_Technology\Lobot && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
+	cd /d F:\Embedded_Technology\Lobot\Output && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-Apps/Demo/CMakeFiles/demo.dir/rule:
-	cd /d F:\Embedded_Technology\Lobot && $(MAKE) -f CMakeFiles\Makefile2 Apps/Demo/CMakeFiles/demo.dir/rule
-.PHONY : Apps/Demo/CMakeFiles/demo.dir/rule
+Drivers/Demo_driver2/CMakeFiles/demo_driver2.dir/rule:
+	cd /d F:\Embedded_Technology\Lobot\Output && $(MAKE) -f CMakeFiles\Makefile2 Drivers/Demo_driver2/CMakeFiles/demo_driver2.dir/rule
+.PHONY : Drivers/Demo_driver2/CMakeFiles/demo_driver2.dir/rule
 
 # Convenience name for target.
-demo: Apps/Demo/CMakeFiles/demo.dir/rule
+demo_driver2: Drivers/Demo_driver2/CMakeFiles/demo_driver2.dir/rule
 
-.PHONY : demo
+.PHONY : demo_driver2
 
 # fast build rule for target.
-demo/fast:
-	cd /d F:\Embedded_Technology\Lobot && $(MAKE) -f Apps\Demo\CMakeFiles\demo.dir\build.make Apps/Demo/CMakeFiles/demo.dir/build
-.PHONY : demo/fast
+demo_driver2/fast:
+	cd /d F:\Embedded_Technology\Lobot\Output && $(MAKE) -f Drivers\Demo_driver2\CMakeFiles\demo_driver2.dir\build.make Drivers/Demo_driver2/CMakeFiles/demo_driver2.dir/build
+.PHONY : demo_driver2/fast
 
-demo.obj: demo.c.obj
+demo_driver2.o: demo_driver2.c.o
 
-.PHONY : demo.obj
+.PHONY : demo_driver2.o
 
 # target to build an object file
-demo.c.obj:
-	cd /d F:\Embedded_Technology\Lobot && $(MAKE) -f Apps\Demo\CMakeFiles\demo.dir\build.make Apps/Demo/CMakeFiles/demo.dir/demo.c.obj
-.PHONY : demo.c.obj
+demo_driver2.c.o:
+	cd /d F:\Embedded_Technology\Lobot\Output && $(MAKE) -f Drivers\Demo_driver2\CMakeFiles\demo_driver2.dir\build.make Drivers/Demo_driver2/CMakeFiles/demo_driver2.dir/demo_driver2.c.o
+.PHONY : demo_driver2.c.o
 
-demo.i: demo.c.i
+demo_driver2.i: demo_driver2.c.i
 
-.PHONY : demo.i
+.PHONY : demo_driver2.i
 
 # target to preprocess a source file
-demo.c.i:
-	cd /d F:\Embedded_Technology\Lobot && $(MAKE) -f Apps\Demo\CMakeFiles\demo.dir\build.make Apps/Demo/CMakeFiles/demo.dir/demo.c.i
-.PHONY : demo.c.i
+demo_driver2.c.i:
+	cd /d F:\Embedded_Technology\Lobot\Output && $(MAKE) -f Drivers\Demo_driver2\CMakeFiles\demo_driver2.dir\build.make Drivers/Demo_driver2/CMakeFiles/demo_driver2.dir/demo_driver2.c.i
+.PHONY : demo_driver2.c.i
 
-demo.s: demo.c.s
+demo_driver2.s: demo_driver2.c.s
 
-.PHONY : demo.s
+.PHONY : demo_driver2.s
 
 # target to generate assembly for a file
-demo.c.s:
-	cd /d F:\Embedded_Technology\Lobot && $(MAKE) -f Apps\Demo\CMakeFiles\demo.dir\build.make Apps/Demo/CMakeFiles/demo.dir/demo.c.s
-.PHONY : demo.c.s
+demo_driver2.c.s:
+	cd /d F:\Embedded_Technology\Lobot\Output && $(MAKE) -f Drivers\Demo_driver2\CMakeFiles\demo_driver2.dir\build.make Drivers/Demo_driver2/CMakeFiles/demo_driver2.dir/demo_driver2.c.s
+.PHONY : demo_driver2.c.s
 
 # Help Target
 help:
@@ -176,10 +176,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... demo
-	@echo ... demo.obj
-	@echo ... demo.i
-	@echo ... demo.s
+	@echo ... demo_driver2
+	@echo ... demo_driver2.o
+	@echo ... demo_driver2.i
+	@echo ... demo_driver2.s
 .PHONY : help
 
 
@@ -191,6 +191,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /d F:\Embedded_Technology\Lobot && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
+	cd /d F:\Embedded_Technology\Lobot\Output && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles\Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

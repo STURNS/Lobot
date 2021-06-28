@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+F:/Embedded_Technology/Lobot/Drivers/Demo_driver/demo_driver.c
+demo_driver.h
+F:/Embedded_Technology/Lobot/Drivers/Demo_driver/demo_driver.h
+
+F:/Embedded_Technology/Lobot/Drivers/Demo_driver/demo_driver.h
+stdint.h
+F:/Embedded_Technology/Lobot/Drivers/Demo_driver/stdint.h
+

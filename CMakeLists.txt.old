@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.5)
+project(Lobot LANGUAGES C CXX ASM)
+
+option(PRODUCT_NAME "Select aA Product In Products Files" Demo)
+
+message(PRODUCT_NAME)
+
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/Tools/cmake")
+include(build)
+
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/Products/${PRODUCT_NAME}")
+include(${PRODUCT_NAME})
+
+Lobot_SetProperty(lobot_product_name ${PRODUCT_NAME})
+message("lobot_product_name-"PRODUCT_NAME)

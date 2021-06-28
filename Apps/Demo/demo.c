@@ -1,11 +1,9 @@
-#include <stdio.h>
-#include <unistd.h>
 #include "demo_driver.h"
+#include "demo_driver2.h"
 
 int main(int argc, char *argv[])
 {
-    printf("hello cmake\n");
     demo_driver();
-    sleep(10);
+    demo_driver2();
     return 0;
 }
