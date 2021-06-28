@@ -1,1 +1,0 @@
-xtensa-lx106-elf-gcc    CMakeFiles/demo.dir/demo.c.o ../../Drivers/Demo_driver2/CMakeFiles/demo_driver2.dir/demo_driver2.c.o  -o demo  ..\..\Drivers\Demo_driver\libdemo_driver.a 

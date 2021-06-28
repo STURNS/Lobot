@@ -1,2 +1,0 @@
-F:/Embedded_Technology/Lobot/Output/CMakeFiles/edit_cache.dir
-F:/Embedded_Technology/Lobot/Output/CMakeFiles/rebuild_cache.dir

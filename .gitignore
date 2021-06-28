@@ -10,8 +10,9 @@
 .vscode
 
 # build files
-Build/
-
+Output/
+Output
+build
 
 # emacs
 .dir-locals.el
