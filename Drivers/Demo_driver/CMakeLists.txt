@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.5)
 
+aux_source_directory(. DIR_SRCS)
+
 add_library(demo_driver
         STATIC
-        demo_driver.h
-        demo_driver.c
+        ${DIR_SRCS}
     )
 
 target_include_directories(demo_driver PUBLIC 

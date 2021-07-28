@@ -2,8 +2,8 @@
 #include "platform.h"
 
 
-int32_t demo_driver()
+int32_t demo_driver2()
 {
-    printf("demo_driver entry\n");
+    printf("demo_driver2 entry\n");
     return 0;
 }  

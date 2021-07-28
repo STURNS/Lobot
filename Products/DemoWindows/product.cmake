@@ -9,7 +9,7 @@ set(CMAKE_CXX_COMPILER C:/Qt/Qt5.9.0/Tools/mingw530_32/bin/g++.exe)
 set(CMAKE_ASM_COMPILER C:/Qt/Qt5.9.0/Tools/mingw530_32/bin/gcc.exe)
 
 # src
-add_subdirectory(${PROJECT_SOURCE_DIR}/Apps/Demo)
+add_subdirectory(${PROJECT_SOURCE_DIR}/Apps/DemoApp)
 add_subdirectory(${PROJECT_SOURCE_DIR}/Drivers/Demo_driver)
 add_subdirectory(${PROJECT_SOURCE_DIR}/Drivers/Demo_driver2)
 add_subdirectory(${PROJECT_SOURCE_DIR}/Platform)
