@@ -5,7 +5,6 @@
 
 int32_t demo_driver2(void);
 
-
 #endif
 
 

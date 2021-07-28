@@ -1,32 +1,33 @@
 cmake_minimum_required(VERSION 3.5)
+
 project(Lobot LANGUAGES C CXX ASM)
 #add_subdirectory(Apps)
 
 
 #常用变量
-message(CMAKE_BINARY_DIR:${CMAKE_BINARY_DIR}) #in source 编译,指得就是工程顶层目录
-message(PROJECT_BINARY_DIR:${PROJECT_BINARY_DIR}) #out-of-source 编译,指的是工程编译发生的目录
-message(Lobot_BINARY_DIR:${Lobot_BINARY_DIR}) #
+message(STATUS CMAKE_BINARY_DIR:${CMAKE_BINARY_DIR}) #in source 编译,指得就是工程顶层目录
+message(STATUS PROJECT_BINARY_DIR:${PROJECT_BINARY_DIR}) #out-of-source 编译,指的是工程编译发生的目录
+message(STATUS Lobot_BINARY_DIR:${Lobot_BINARY_DIR}) #
 
 # 工程顶层目录
-message(CMAKE_SOURCE_DIR:${CMAKE_SOURCE_DIR})
-message(PROJECT_SOURCE_DIR:${PROJECT_SOURCE_DIR})
-message(Lobot_SOURCE_DIR:${${PROJECT_NAME}_SOURCE_DIR})
+message(STATUS CMAKE_SOURCE_DIR:${CMAKE_SOURCE_DIR})
+message(STATUS PROJECT_SOURCE_DIR:${PROJECT_SOURCE_DIR})
+message(STATUS Lobot_SOURCE_DIR:${${PROJECT_NAME}_SOURCE_DIR})
 
 # 当前处理的 CMakeLists.txt 所在的路径
-message(CMAKE_CURRENT_SOURCE_DIR:${CMAKE_CURRENT_SOURCE_DIR})
+message(STATUS CMAKE_CURRENT_SOURCE_DIR:${CMAKE_CURRENT_SOURCE_DIR})
 
 # 如果是 in-source 编译,它跟 CMAKE_CURRENT_SOURCE_DIR 一致,如果是 out-of-source 编译,他指的是 target 编译目录
 # ADD_SUBDIRECTORY(src bin)可以更改这个变量的值
-message(CMAKE_CURRRENT_BINARY_DIR:${CMAKE_CURRRENT_BINARY_DIR})
-message(CMAKE_CURRRENT_BINARY_DIR:${CMAKE_CURRRENT_BINARY_DIR})
-message(after add sub, CMAKE_CURRRENT_BINARY_DIR:${CMAKE_CURRRENT_BINARY_DIR})
+message(STATUS CMAKE_CURRRENT_BINARY_DIR:${CMAKE_CURRRENT_BINARY_DIR})
+message(STATUS CMAKE_CURRRENT_BINARY_DIR:${CMAKE_CURRRENT_BINARY_DIR})
+message(STATUS after add sub, CMAKE_CURRRENT_BINARY_DIR:${CMAKE_CURRRENT_BINARY_DIR})
 
 # CMakeLists.txt 的完整路径
-message(CMAKE_CURRENT_LIST_FILE:${CMAKE_CURRENT_LIST_FILE})
+message(STATUS CMAKE_CURRENT_LIST_FILE:${CMAKE_CURRENT_LIST_FILE})
 
 # 输出这个变量所在的行
-message(CMAKE_CURRENT_LIST_FILE:${CMAKE_CURRENT_LIST_LINE})
+message(STATUS CMAKE_CURRENT_LIST_FILE:${CMAKE_CURRENT_LIST_LINE})
 
 # 变量
 set(USE_LIBRARY ON)
@@ -39,17 +40,17 @@ message(STATUS "__source ${__source}")
 # if else
 
 if (USE_LIBRARY)
-    message(USE_LIBRARY IS - ${USE_LIBRARY})
+    message(STATUS USE_LIBRARY IS - ${USE_LIBRARY})
 else ()
-    message(USE_LIBRARY IS - ${USE_LIBRARY})
+    message(STATUS USE_LIBRARY IS - ${USE_LIBRARY})
 endif()
 
 # 选项cmake .. -G "MinGW Makefiles" -D USE_LIBRARY2=OFF
 option(USE_LIBRARY2 "Compile sources into a library" OFF)
 if (USE_LIBRARY2 EQUAL ON)
-    message(USE_LIBRARY2 IS - ${USE_LIBRARY2})
+    message(STATUS USE_LIBRARY2 IS - ${USE_LIBRARY2})
 else ()
-    message(USE_LIBRARY2 IS - ${USE_LIBRARY2})
+    message(STATUS USE_LIBRARY2 IS - ${USE_LIBRARY2})
 endif()
 
 #set(CMAKE_C_COMPILER xtensa-lx106-elf-gcc)
@@ -57,7 +58,7 @@ endif()
 #set(CMAKE_ASM_COMPILER xtensa-lx106-elf-gcc)
 
 if (PRODUCT_NAME MATCHES "Demo")
-    message(${PRODUCT_NAME})
+    message(STATUS ${PRODUCT_NAME})
 endif()
 
 list(APPEND test_list "123")
@@ -116,3 +117,12 @@ elseif(CMAKE_HOST_SYSTEM_PROCESSOR MATCHES "AMD64")
 else()
     message(STATUS "host processor architecture is unknown")
 endif()
+
+add_custom_target(Learn_target 
+    COMMAND ECHO "this is add_custom_target"
+    COMMENT "this is add_custom_target"
+)
+
+set_property(TARGET Learn_target APPEND PROPERTY learn_property "learn_property val")
+message(STATUS "Learn_target:COMMENT" ${Learn_target})
+
